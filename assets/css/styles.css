@@ -107,6 +107,7 @@ body {
     align-items: center;
     justify-content: space-between;
     transition: 500ms ease;
+    z-index: 99;
 }
 
 .logo {
@@ -219,7 +220,7 @@ body {
     width: 80vw;
     margin-left: 10vw;
     /* background-color: pink; */
-    padding: 20vh 0vh
+    padding: 15vh 0vh 5vh 0vh
 }
 
 .headingWrapper {
@@ -301,4 +302,56 @@ body {
 
 .headSubAlt {
     color: #54CA95;
+}
+
+.projectsWrapper {
+    margin-top: 5vh;
+}
+
+.projectsWrapper a {
+    color: black;
+}
+
+.projectWrapper {
+    padding: 5vh;
+    width: 50vw;
+    margin-left: 10vw;
+    border-left: 2px solid #54CA95;
+    transition: 500ms ease;
+    margin-bottom: 5vh;
+}
+
+.projectWrapper:hover {
+    border-left: 5px solid #54CA95;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+.projectHead {
+    font-size: 1.5em;
+}
+
+.skillsWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.skillsWrapperInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skill {
+    margin: 2.5vh 5vh;
+    background-color: white;
+    border: 1px solid #54CA95;
+    border-radius: 50px;
+    color: #54CA95;
+    padding: 1vh 3vh;
+    transition: 500ms ease;
+}
+
+.skill:hover {
+    background-color: #54CA95;
+    color: white;
 }
