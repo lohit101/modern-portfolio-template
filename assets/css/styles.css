@@ -3,36 +3,30 @@
     padding: 0;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    /* font-family: 'Orbitron', sans-serif; */
-    /* cursor: none; */
 }
 
 body {
     overflow-x: hidden;
     background-color: white;
-    /* background-image: linear-gradient(to bottom, blue, pink); */
 }
 
 ::-webkit-scrollbar {
     width: 10px;
 }
-  
-  /* Track */
+
 ::-webkit-scrollbar-track {
     background: white; 
 }
-   
-  /* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #54CA95; 
 }
-  
-  /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
     background: #43ad7e; 
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
     color: white;
     background: #54CA95;
 }
@@ -94,10 +88,6 @@ body {
     100% { transform: translate(5%,0) }
 }
 
-
-
-
-
 .navbar {
     width: 100vw;
     height: 15vh;
@@ -149,6 +139,7 @@ body {
 .homeHead {
     /* background-color: pink; */
     height: 75vh;
+    width: 100vw;
     padding-top: 25vh;
     display: flex;
     justify-content: center;
@@ -261,17 +252,15 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
-    padding-right: 5vh;
-    border-right: 3px solid #54CA95;
-}
-
-.experienceContentPara {
-    text-align: right;
+    align-items: flex-start;
+    padding-left: 5vh;
+    border-left: 3px solid #54CA95;
 }
 
 .experienceDateandLoc {
-    margin-left: 5vh;
+    margin-right: 5vh;
+    text-align: right;
+    width: 30%;
 }
 
 .educationWrapper {
@@ -280,7 +269,6 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* background-color: pink; */
 }
 
 .educationDiv {
@@ -323,7 +311,7 @@ body {
 
 .projectWrapper:hover {
     border-left: 5px solid #54CA95;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
 }
 
 .projectHead {
@@ -334,6 +322,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 10vh;
 }
 
 .skillsWrapperInner {
@@ -349,9 +338,247 @@ body {
     color: #54CA95;
     padding: 1vh 3vh;
     transition: 500ms ease;
+    cursor: default;
 }
 
 .skill:hover {
     background-color: #54CA95;
     color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #54CA95;
+    color: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 10vh 10vw;
+}
+
+.footerInner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly  ;
+}
+
+.footerIcon {
+    width: 2em;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: 500ms ease;
+}
+
+.footerIcon:hover {
+    border: 1px solid white;
+    transform: scale(1.1);
+}
+
+.navbarMobile {
+    display: none;
+    width: 100vw;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    transition: 500ms ease;
+}
+
+.menuBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.5vh;
+    margin-right: 5vw;
+}
+
+.menuLine {
+    transition: 500ms ease;
+    display: inline-block;
+    height: 1px;
+    width: 10vw;
+    background-color: black;
+}
+
+.menuLine:nth-child(2) {
+    width: 7.5vw;
+}
+
+.menu {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    opacity: 0;
+    transition: 500ms;
+    position: fixed;
+    padding-top: 10vh;
+    background-color: white;
+}
+
+.menuControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding-top: 5vh;
+}
+
+.menuControlLink {
+    margin: 2vh;
+    font-size: 20px;
+    color: black;
+}
+
+.downloadBtnHeadMenu {
+    margin-top: 5vh;
+}
+
+@media only screen and (max-width: 700px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbarMobile {
+        display: flex;
+    }
+
+    .homeHead {
+        flex-direction: column;
+        padding: 0;
+        padding-top: 10vh;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .profileImageWrapper {
+        width: 40vw;
+        height: 40vw;
+        margin-bottom: 20px;
+    }
+
+    .profileImage {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .textWrapperHead {
+        padding: 0;
+    }
+
+    .headName {
+        font-size: 2em;
+    }
+
+    .headPara {
+        width: 80vw;
+    }
+
+    .headButtons {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .downloadBtnHead {
+        text-align: center;
+    }
+
+    .contentWrapper {
+        align-items: center;
+    }
+
+    .experienceContentWrapper {
+        width: 90vw;
+    }
+
+    .experienceContentInner {
+        flex-direction: column;
+    }
+
+    .experienceDateandLoc {
+        width: 100%;
+        text-align: left;
+        border-left: 3px solid #54CA95;
+        margin-bottom: 20px;
+        padding-left: 10px;
+    }
+
+    .experienceContent {
+        width: calc(100% - 10px);
+        padding-left: 10px;
+    }
+
+    .educationWrapper {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .educationDiv {
+        padding: 0px;
+        width: 80vw;
+        border: none;
+    }
+
+    .educationDiv:hover {
+        transform: translateY(0%);
+        border: none;
+        box-shadow: none;
+    }
+
+    .projectsWrapper {
+        width: 100vw;
+    }
+
+    .projectWrapper {
+        padding: 5%;
+        width: calc(90% - 10%);
+        margin: 5%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .projectContent p:nth-child(2) {
+        color: gray;
+    }
+
+    .skillsWrapper {
+        width: 100vw;
+        margin-top: 20px;
+    }
+
+    .skill {
+        margin: 10px;
+    }
+
+    .footer {
+        padding: 5vh;
+    }
+
+    .footerInner {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .footerLeft {
+        margin-top: 20px;
+    }
+
+    .footerRight {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
